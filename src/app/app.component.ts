@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  urlPokemon;
-  onSelectedPokemon(url){
-    console.log(url);
-
-    this.urlPokemon = url;
-  }
 }
