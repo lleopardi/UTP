@@ -1,4 +1,4 @@
-export interface coordinates {
+export interface Coordinates {
   latitude: number;
   longitude: number;
 }
