@@ -5,8 +5,8 @@ export class PositionISSViewer {
   private lng: number;
 
   constructor(positionISS: PositionISS) {
-    this.lat = positionISS.iss_position.latitude;
-    this.lng = positionISS.iss_position.longitude;
+    this.lat = Number(positionISS.iss_position.latitude);
+    this.lng = Number(positionISS.iss_position.longitude);
   }
 
   get latitude(): number {
