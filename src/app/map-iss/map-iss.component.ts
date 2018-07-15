@@ -4,6 +4,7 @@ import { MapIssService } from "./map-iss.service";
 import { TimerObservable } from "rxjs/observable/TimerObservable";
 import "rxjs/add/operator/takeWhile";
 import { PositionISSViewer } from "./models/position-iss-viewer";
+import { LatLngLiteral } from "../../../node_modules/@agm/core/services/google-maps-types";
 
 @Component({
   selector: "app-map-iss",
@@ -17,7 +18,7 @@ export class MapIssComponent implements OnInit {
   alive: boolean;
   interval: number;
 
-  triangleCoords = [
+  triangleCoords: Array<LatLngLiteral> = [
     { lat: 25.774, lng: -80.19 },
     { lat: 18.466, lng: -66.118 },
     { lat: 32.321, lng: -64.757 }

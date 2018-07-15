@@ -1,30 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
+import { AppComponent } from "./app.component";
+import { MapIssComponent } from "./map-iss/map-iss.component";
 
-import { AppComponent } from './app.component';
-import { MapIssComponent } from './map-iss/map-iss.component';
-
-import { AgmCoreModule } from '@agm/core';
-import { PeopleListComponent } from './people-list/people-list.component';
-
-
+import { AgmCoreModule } from "@agm/core";
+import { PeopleListComponent } from "./people-list/people-list.component";
+import { environment } from "../environments/environment";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MapIssComponent,
-    PeopleListComponent
-  ],
+  declarations: [AppComponent, MapIssComponent, PeopleListComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAEefRDGoJ1hCfMeXe-9i9U84fUWpQkmUE'
+      apiKey: environment.apiKey
     })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
